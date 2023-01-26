@@ -1,0 +1,12 @@
+def gradingStudents(grades):
+    ans = []
+    for grade in grades:
+        if grade >= 38:
+            next_multiple = grade + (5 - (grade % 5))
+            if grade % 5 >= 3:
+                ans.append(next_multiple)
+            else:
+                ans.append(grade)
+        else:
+            ans.append(grade)
+    return ans
